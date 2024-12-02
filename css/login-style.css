@@ -1,123 +1,140 @@
+/* --- Conteneur principal pour la page de connexion --- */
 .login-container {
-    background: linear-gradient(0deg, rgb(53, 53, 53) 0%, rgb(55, 55, 55) 100%);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
+    background: linear-gradient(0deg, rgb(53, 53, 53) 0%, rgb(55, 55, 55) 100%); /* Dégradé de gris pour l'arrière-plan */
+    width: 100%; /* Largeur de 100% */
+    height: 100%; /* Hauteur de 100% */
+    display: flex; /* Utilisation de Flexbox pour la mise en page */
+    flex-direction: column; /* Disposition verticale des éléments */
+    justify-content: center; /* Centrer verticalement */
+    align-items: center; /* Centrer horizontalement */
+    color: white; /* Couleur du texte en blanc */
+    text-align: center; /* Centrer le texte */
+    padding: 20px; /* Ajouter un padding autour du contenu */
+    box-sizing: border-box; /* Inclure le padding et les bordures dans la taille totale */
 }
 
+/* --- Style du titre de la page de connexion --- */
 .login-container h2 {
-    font-size: 2.5rem;
-    font-weight: 900;
-    padding-bottom: 20px;
+    font-size: 2.5rem; /* Taille de la police du titre */
+    font-weight: 900; /* Poids de la police en gras */
+    padding-bottom: 20px; /* Espacement sous le titre */
 }
 
+/* --- Conteneur pour chaque champ de formulaire --- */
 .form-group {
-    margin-bottom: 20px;
-    display: flex;               
-    flex-direction: column;      
-    align-items: center;         
-    width: 100%;   
+    margin-bottom: 20px; /* Marge inférieure pour espacer les champs */
+    display: flex; /* Utilisation de Flexbox pour organiser les éléments internes */
+    flex-direction: column; /* Disposition verticale des éléments */
+    align-items: center; /* Centrer les éléments horizontalement */
+    width: 100%; /* Largeur totale */
 }
 
+/* --- Style des labels des champs de formulaire --- */
 .form-group label {
-    z-index: 1;
-    margin-bottom: 10px;
+    z-index: 1; /* Assurer que le label soit au-dessus des champs */
+    margin-bottom: 10px; /* Espacement sous le label */
 }
 
+/* --- Style des champs de saisie (texte et mot de passe) --- */
 .form-group input[type="text"],
 .form-group input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    padding-left: 50px;
-    background-color: rgb(124, 124, 124);
-    border: 2px solid rgb(71, 71, 71);  
-    border-radius: 8px;
-    font-size: 1.1rem;           
-    color: white;
-    outline: none;
-    transition: box-shadow 0.5s ease;
+    width: 100%; /* Les champs prennent toute la largeur */
+    padding: 12px; /* Espacement interne pour les champs */
+    padding-left: 50px; /* Ajout d'un espacement supplémentaire à gauche pour les icônes (si utilisées) */
+    background-color: rgb(124, 124, 124); /* Fond gris pour les champs */
+    border: 2px solid rgb(71, 71, 71); /* Bordure gris foncé autour des champs */
+    border-radius: 8px; /* Coins arrondis pour les champs */
+    font-size: 1.1rem; /* Taille de la police dans les champs */
+    color: white; /* Texte en blanc dans les champs */
+    outline: none; /* Enlever le contour par défaut */
+    transition: box-shadow 0.5s ease; /* Transition pour l'effet de focus */
 }
 
+/* --- Effet de focus sur les champs de saisie --- */
 .form-group input[type="text"]:focus,
 .form-group input[type="password"]:focus {
-    box-shadow: 0 0 30px 8px #007ca5;
+    box-shadow: 0 0 30px 8px #007ca5; /* Ombre bleue autour du champ au focus */
 }
 
+/* --- Style des placeholders dans les champs de saisie --- */
 .form-group input[type="text"]::placeholder,
 .form-group input[type="password"]::placeholder {
-    color: rgb(71, 71, 71);
+    color: rgb(71, 71, 71); /* Couleur plus sombre pour le texte du placeholder */
 }
 
+/* --- Lien pour s'inscrire --- */
 .signup-link {
-    font-size: 1.1rem;
-    margin-top: 10px;
+    font-size: 1.1rem; /* Taille du texte pour le lien d'inscription */
+    margin-top: 10px; /* Marge supérieure pour espacer du formulaire */
 }
 
+/* --- Style du lien d'inscription --- */
 .signup-link a {
-    color: #017cda;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    color: #017cda; /* Couleur bleue pour le lien */
+    text-decoration: none; /* Enlever le soulignement par défaut */
+    transition: color 0.3s ease; /* Transition pour changer la couleur du lien */
 }
 
+/* --- Effet au survol du lien d'inscription --- */
 .signup-link a:hover {
-    color: #00c1d4;
+    color: #00c1d4; /* Couleur différente au survol */
 }
 
+/* --- Style du bouton de connexion --- */
 .login-btn {
-    background-color: rgb(125, 125, 125);
-    color: rgb(228, 228, 228);
-    font-size: 1.2rem;
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
+    background-color: rgb(125, 125, 125); /* Fond gris clair pour le bouton */
+    color: rgb(228, 228, 228); /* Texte clair sur le bouton */
+    font-size: 1.2rem; /* Taille de la police dans le bouton */
+    width: 100%; /* Largeur totale du bouton */
+    padding: 12px; /* Espacement interne du bouton */
+    border-radius: 8px; /* Coins arrondis pour le bouton */
+    border: none; /* Supprimer la bordure par défaut */
+    cursor: pointer; /* Changer le curseur en pointeur au survol */
+    transition: background-color 0.3s ease; /* Transition pour la couleur de fond */
+    margin-top: 20px; /* Marge supérieure pour espacer du formulaire */
 }
 
+/* --- Effet au survol du bouton --- */
 .login-btn:hover {
-    background-color: rgb(147, 147, 147);
+    background-color: rgb(147, 147, 147); /* Changer la couleur de fond au survol */
 }
 
+/* --- Style du footer (pied de page) --- */
 footer {
-    background-color: #1c1c1c;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 15px;
+    background-color: #1c1c1c; /* Fond gris très foncé */
+    color: white; /* Texte en blanc */
+    display: flex; /* Utilisation de Flexbox pour organiser les éléments */
+    flex-direction: column; /* Disposition verticale des éléments du footer */
+    align-items: center; /* Centrer horizontalement */
+    justify-content: center; /* Centrer verticalement */
+    padding-bottom: 15px; /* Espacement inférieur */
 }
 
+/* --- Espacement autour des éléments du footer --- */
 footer * {   
-    margin: auto;
-    margin-top: 5px;
+    margin: auto; /* Centrer tous les éléments */
+    margin-top: 5px; /* Espacement entre les éléments */
 }
 
+/* --- Style pour les titres et paragraphes dans le footer --- */
 .contact-info h2 {
-    text-align: center;
-    color: #1c1c1c;
+    text-align: center; /* Centrer le titre */
+    color: #1c1c1c; /* Couleur du texte sombre pour les titres */
 }
 
 .contact-info p {
-    text-align: center;
-    color: #1c1c1c;
+    text-align: center; /* Centrer le texte */
+    color: #1c1c1c; /* Couleur du texte sombre pour les paragraphes */
 }
 
+/* --- Style pour les liens dans le footer --- */
 .contact-info a {
-    color: #017cda;
-    text-decoration: none;
-    font-weight: bold;
+    color: #017cda; /* Couleur bleue pour les liens */
+    text-decoration: none; /* Enlever le soulignement par défaut */
+    font-weight: bold; /* Mettre les liens en gras */
 }
 
+/* --- Effet au survol des liens dans le footer --- */
 .contact-info a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Souligner les liens au survol */
 }

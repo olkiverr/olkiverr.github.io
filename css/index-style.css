@@ -1,181 +1,203 @@
+/* --- Conteneur principal pour le slider des tendances --- */
 .trending-slider-container {
-    border-radius: 20px;
-    width: 90%;
-    height: 30%;
-    margin: 0 auto;
+    border-radius: 20px; /* Coins arrondis pour le conteneur */
+    width: 90%; /* Largeur du conteneur à 90% de la largeur de la page */
+    height: 30%; /* Hauteur du conteneur à 30% de la hauteur de la page */
+    margin: 0 auto; /* Centrer le conteneur horizontalement */
 }
 
+/* --- Style du texte dans le conteneur des tendances --- */
 .trending-slider-container p {
-    color: white;
-    font-size: 160%;
+    color: white; /* Texte en blanc */
+    font-size: 160%; /* Taille de la police à 160% pour une meilleure visibilité */
 }
 
+/* --- Slider des tendances (affichage horizontal des éléments) --- */
 .trending-slider {
-    width: 100%;
-    height: 70%;
-    display: flex;
-    position: relative;
+    width: 100%; /* Largeur à 100% */
+    height: 70%; /* Hauteur du slider à 70% de la hauteur du conteneur */
+    display: flex; /* Utilisation de Flexbox pour afficher les éléments horizontalement */
+    position: relative; /* Positionnement relatif pour les flèches de navigation */
 }
 
+/* --- Conteneur des images des animes dans le slider des tendances --- */
 .div-anime-img-trending-container {
-    border: rgb(36, 36, 36) 3px solid;
-    border-radius: 20px;
-    display: flex;
-    overflow: auto;
-    height: 100%;
-    width: 100%;
-    margin: auto;
-    position: relative;
-    scroll-behavior: smooth;
+    border: rgb(36, 36, 36) 3px solid; /* Bordure gris foncé autour du conteneur des images */
+    border-radius: 20px; /* Coins arrondis pour le conteneur des images */
+    display: flex; /* Utilisation de Flexbox pour une disposition des éléments en ligne */
+    overflow: auto; /* Permet le défilement horizontal des images */
+    height: 100%; /* Hauteur à 100% du conteneur parent */
+    width: 100%; /* Largeur à 100% du conteneur parent */
+    margin: auto; /* Centrer le conteneur des images horizontalement */
+    position: relative; /* Positionnement relatif pour les flèches de navigation */
+    scroll-behavior: smooth; /* Défilement fluide pour une meilleure expérience utilisateur */
 }
 
+/* --- Supprimer la barre de défilement verticale --- */
 .div-anime-img-trending-container::-webkit-scrollbar {
-    height: 0;
+    height: 0; /* Supprimer la barre de défilement verticale */
 }
 
+/* --- Style des images d'animes dans le slider des tendances --- */
 .div-anime-img-trending-container .div-anime-img {
-    display: inline-block;
-    position: relative;
+    display: inline-block; /* Afficher chaque image en ligne */
+    position: relative; /* Positionnement relatif pour les légendes */
 }
 
+/* --- Taille des images dans le slider des tendances --- */
 .div-anime-img img {
-    display: block;
-    height: 100%;
-    width: auto;
+    display: block; /* Supprimer l'espace sous l'image */
+    height: 100%; /* Hauteur de l'image à 100% du conteneur */
+    width: auto; /* Largeur de l'image ajustée automatiquement */
 }
 
+/* --- Style des légendes des images (texte en bas des images) --- */
 .div-anime-img p {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px 0;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s;
+    position: absolute; /* Positionnement absolu pour placer la légende en bas de l'image */
+    bottom: 0; /* Placer la légende en bas */
+    left: 0; /* Placer la légende à gauche */
+    width: 100%; /* Largeur de la légende égale à celle de l'image */
+    color: white; /* Texte en blanc */
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent noir */
+    padding: 5px 0; /* Padding pour espacer le texte */
+    text-align: center; /* Centrer le texte */
+    opacity: 0; /* Initialement invisible */
+    transition: opacity 0.5s; /* Transition pour rendre la légende visible au survol */
 }
 
+/* --- Effet de survol : rendre la légende visible --- */
 .div-anime-img:hover p {
-    opacity: 1;
+    opacity: 1; /* Rendre la légende visible au survol */
 }
 
+/* --- Style des flèches de navigation pour le slider --- */
 .slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-    opacity: 0;
-    transition: background-color 0.3s, opacity 0.5s;
+    position: absolute; /* Positionnement absolu pour placer les flèches à gauche et droite */
+    top: 50%; /* Placer les flèches au centre verticalement */
+    transform: translateY(-50%); /* Centrer parfaitement les flèches */
+    font-size: 30px; /* Taille des flèches */
+    color: #fff; /* Couleur blanche pour les flèches */
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour les flèches */
+    padding: 10px; /* Padding autour des flèches pour améliorer la visibilité */
+    cursor: pointer; /* Curseur de type pointeur au survol */
+    z-index: 10; /* Placer les flèches devant les autres éléments */
+    opacity: 0; /* Initialement invisible */
+    transition: background-color 0.3s, opacity 0.5s; /* Transitions pour la couleur de fond et l'opacité */
 }
 
+/* --- Flèche gauche (positionnée à gauche) --- */
 .left-arrow {
-    left: 10px;
+    left: 10px; /* Positionner la flèche à gauche */
 }
 
+/* --- Flèche droite (positionnée à droite) --- */
 .right-arrow {
-    right: 10px;
+    right: 10px; /* Positionner la flèche à droite */
 }
 
+/* --- Effet de survol : rendre les flèches visibles --- */
 .trending-slider:hover .slider-arrow {
-    opacity: 1;
+    opacity: 1; /* Rendre les flèches visibles au survol du slider */
 }
 
+/* --- Effet au survol des flèches : assombrir leur fond --- */
 .slider-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8); /* Assombrir la couleur de fond des flèches au survol */
 }
 
+/* --- Conteneur principal pour le slider des prochains animes --- */
 .upcoming-slider-container {
-    border-radius: 20px;
-    width: 90%;
-    height: 30%;
-    margin: 1% auto;
+    border-radius: 20px; /* Coins arrondis pour le conteneur */
+    width: 90%; /* Largeur du conteneur à 90% */
+    height: 30%; /* Hauteur du conteneur à 30% */
+    margin: 1% auto; /* Marge autour du conteneur et centrage horizontal */
 }
 
+/* --- Style du texte dans le conteneur des prochains animes --- */
 .upcoming-slider-container p {
-    color: white;
-    font-size: 160%;
+    color: white; /* Texte en blanc */
+    font-size: 160%; /* Taille du texte plus grande pour plus de visibilité */
 }
 
+/* --- Slider des prochains animes --- */
 .upcoming-slider {
-    width: 100%;
-    height: 70%;
-    display: flex;
-    position: relative;
+    width: 100%; /* Largeur à 100% */
+    height: 70%; /* Hauteur à 70% */
+    display: flex; /* Utilisation de Flexbox pour disposer les éléments horizontalement */
+    position: relative; /* Positionnement relatif pour les flèches de navigation */
 }
 
+/* --- Conteneur des images des animes dans le slider des prochains animes --- */
 .div-anime-img-upcoming-container {
-    border: rgb(36, 36, 36) 3px solid;
-    border-radius: 20px;
-    display: flex;
-    overflow: auto;
-    height: 100%;
-    width: 100%;
-    margin: auto;
-    position: relative;
-    scroll-behavior: smooth;
+    border: rgb(36, 36, 36) 3px solid; /* Bordure gris foncé */
+    border-radius: 20px; /* Coins arrondis */
+    display: flex; /* Flexbox pour disposition horizontale */
+    overflow: auto; /* Permet le défilement horizontal des images */
+    height: 100%; /* Hauteur à 100% du conteneur */
+    width: 100%; /* Largeur à 100% */
+    margin: auto; /* Centrer horizontalement */
+    position: relative; /* Positionnement relatif pour les flèches de navigation */
+    scroll-behavior: smooth; /* Défilement fluide */
 }
 
+/* --- Supprimer la barre de défilement verticale du conteneur des images --- */
 .div-anime-img-upcoming-container::-webkit-scrollbar {
-    height: 0;
+    height: 0; /* Supprimer la barre de défilement verticale */
 }
 
-.div-anime-img-upcoming-container .div-anime-img {
-    display: inline-block;
-    position: relative;
-}
-
+/* --- Effet de survol : rendre les flèches visibles dans le slider des prochains animes --- */
 .upcoming-slider:hover .slider-arrow {
-    opacity: 1;
+    opacity: 1; /* Rendre les flèches visibles au survol */
 }
 
+/* --- Effet au survol des flèches de navigation --- */
 .slider-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8); /* Assombrir les flèches au survol */
 }
 
+/* --- Footer (pied de page) --- */
 footer {
-    background-color: #1c1c1c;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 15px;
+    background-color: #1c1c1c; /* Fond sombre pour le footer */
+    color: white; /* Texte en blanc */
+    display: flex; /* Utilisation de Flexbox pour organiser les éléments du footer */
+    flex-direction: column; /* Disposition verticale des éléments */
+    align-items: center; /* Centrer les éléments horizontalement */
+    justify-content: center; /* Centrer les éléments verticalement */
+    padding-bottom: 15px; /* Espacement inférieur pour le footer */
 }
 
+/* --- Espacement entre les éléments du footer --- */
 footer * {   
-    margin: auto;
-    margin-top: 5px;
+    margin: auto; /* Centrer tous les éléments */
+    margin-top: 5px; /* Espacement entre les éléments */
 }
 
+/* --- Style des titres et paragraphes dans le footer --- */
 .contact-info h2 {
-    text-align: center;
-    color: #1c1c1c;
+    text-align: center; /* Centrer le titre */
+    color: #1c1c1c; /* Couleur sombre pour les titres */
 }
 
 .contact-info p {
-    text-align: center;
-    color: #1c1c1c;
+    text-align: center; /* Centrer le texte */
+    color: #1c1c1c; /* Couleur sombre pour le texte */
 }
 
+/* --- Style des liens dans le footer --- */
 .contact-info a {
-    color: #017cda;
-    text-decoration: none;
-    font-weight: bold;
+    color: #017cda; /* Couleur bleue pour les liens */
+    text-decoration: none; /* Enlever le soulignement par défaut */
+    font-weight: bold; /* Gras pour les liens */
 }
 
+/* --- Effet au survol des liens dans le footer --- */
 .contact-info a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Souligner les liens au survol */
 }
 
+/* --- Media Query pour les écrans de taille maximale 768px (tablettes et téléphones) --- */
 @media (max-width: 768px) {
     .slider-arrow {
-        opacity: 1;
+        opacity: 1; /* Rendre les flèches visibles même sur les petits écrans */
     }
 }

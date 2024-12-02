@@ -1,0 +1,120 @@
+/* --- Styles généraux pour la FAQ --- */
+
+/* Conteneur principal de la FAQ */
+.faq-container {
+    width: 80%; /* La largeur du conteneur de la FAQ est de 80% de la largeur totale de l'écran */
+    margin: 0 auto; /* Centrage du conteneur horizontalement */
+    padding: 2% 0; /* Espacement vertical de 2% */
+    color: #fff; /* Couleur du texte en blanc pour tout le contenu */
+}
+
+/* Titre principal de la FAQ */
+.faq-container h1 {
+    font-size: 2.5rem; /* Taille de la police pour le titre */
+    text-align: center; /* Centrer le titre */
+    margin-bottom: 2rem; /* Espacement en bas du titre */
+    color: #ffffff; /* Couleur du titre en blanc */
+}
+
+/* Conteneur de toutes les questions de la FAQ */
+.faq {
+    display: flex; /* Utilisation de flexbox pour disposer les éléments */
+    flex-direction: column; /* Disposition verticale des éléments (une question sous l'autre) */
+    gap: 1.5rem; /* Espacement entre chaque élément de la FAQ */
+}
+
+/* Style de chaque item/question de la FAQ */
+.faq-item {
+    background-color: #2b2b2b; /* Fond gris foncé pour chaque question */
+    border-radius: 15px; /* Coins arrondis */
+    padding: 1.5rem; /* Espacement interne autour du contenu de chaque question */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Ombre portée légère autour de chaque item */
+}
+
+/* Titre de chaque question dans la FAQ */
+.faq-question h3 {
+    font-size: 1.6rem; /* Taille de la police du titre de chaque question */
+    margin-bottom: 1rem; /* Espacement en bas du titre de la question */
+    color: #fff; /* Couleur du texte en blanc */
+    cursor: pointer; /* Curseur en forme de main pour signaler l'interactivité */
+    transition: color 0.3s ease; /* Transition douce pour changer la couleur au survol */
+}
+
+/* Effet au survol de la question : changement de couleur */
+.faq-question h3:hover {
+    color: #017cda; /* La couleur devient bleue lorsqu'on survole la question */
+}
+
+/* Style de la réponse à la question (initialement cachée) */
+.faq-answer p {
+    font-size: 1rem; /* Taille de la police pour la réponse */
+    color: #ddd; /* Couleur du texte en gris clair */
+    line-height: 1.6; /* Hauteur de ligne pour un meilleur espacement entre les lignes du texte */
+    display: none; /* La réponse est cachée par défaut */
+    transition: display 0.5s ease; /* Transition pour afficher la réponse de manière fluide */
+}
+
+/* Afficher la réponse lorsqu'on survole l'item de la FAQ */
+.faq-item:hover .faq-answer p {
+    display: block; /* Affiche la réponse au survol de l'item */
+}
+
+/* Afficher la réponse lorsque l'item a la classe "open" (au clic sur la question) */
+.faq-item.open .faq-answer p {
+    display: block; /* Affiche la réponse lorsque l'élément est "ouvert" */
+}
+
+/* Style des liens dans les réponses de la FAQ */
+.faq-answer a {
+    color: #017cda; /* Couleur bleue pour les liens */
+    text-decoration: none; /* Retirer le soulignement des liens */
+    font-weight: bold; /* Mettre en gras les liens */
+}
+
+/* Effet au survol du lien dans la réponse : souligner le lien */
+.faq-answer a:hover {
+    text-decoration: underline; /* Souligner le lien au survol */
+}
+
+/* --- Style du footer (pied de page) --- */
+footer {
+    background-color: #1c1c1c; /* Fond sombre pour le footer */
+    color: white; /* Texte en blanc */
+    display: flex; /* Utilisation de flexbox pour centrer les éléments */
+    flex-direction: column; /* Disposition verticale des éléments */
+    align-items: center; /* Centrer les éléments horizontalement */
+    justify-content: center; /* Centrer les éléments verticalement */
+    padding-bottom: 15px; /* Espacement au bas du footer */
+}
+
+/* Espacement entre les éléments du footer */
+footer * {
+    margin: auto; /* Centrer tous les éléments */
+    margin-top: 5px; /* Ajouter un petit espacement entre chaque élément */
+}
+
+/* --- Responsive Design (adaptation pour les petits écrans, par exemple les tablettes et téléphones) --- */
+
+/* Lorsque la largeur de l'écran est inférieure ou égale à 768px (tablettes et téléphones) */
+@media (max-width: 768px) {
+    /* Redimensionner le conteneur de la FAQ pour l'adapter aux petits écrans */
+    .faq-container {
+        width: 100%; /* Utiliser toute la largeur de l'écran */
+        padding: 2%; /* Ajouter un peu de padding autour */
+    }
+
+    /* Réduire la taille du titre principal de la FAQ */
+    .faq-container h1 {
+        font-size: 2rem; /* Réduire la taille du titre pour les petits écrans */
+    }
+
+    /* Réduire la taille de la police des questions */
+    .faq-question h3 {
+        font-size: 1.4rem; /* Réduire la taille des questions */
+    }
+
+    /* Réduire la taille de la police des réponses */
+    .faq-answer p {
+        font-size: 0.9rem; /* Réduire la taille du texte des réponses */
+    }
+}
