@@ -1,179 +1,204 @@
+/* --- Importation de la police "Archivo" depuis Google Fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* --- Réinitialisation des marges et du padding sur html et body --- */
 html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: "Archivo", sans-serif;
+    margin: 0; /* Enlever les marges par défaut */
+    padding: 0; /* Enlever les espacements internes par défaut */
+    width: 100%; /* L'élément prend toute la largeur */
+    height: 100%; /* L'élément prend toute la hauteur */
+    font-family: "Archivo", sans-serif; /* Définir la police pour le site */
 }
 
+/* --- Disposition flexible du body --- */
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    display: flex; /* Utilisation de Flexbox pour organiser les éléments */
+    flex-direction: column; /* Disposition en colonne (verticale) */
+    min-height: 100vh; /* Garantir une hauteur minimale de 100% de la vue */
 }
 
+/* --- Personnalisation de la barre de défilement --- */
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 12px; /* Largeur de la barre de défilement */
 }
 
+/* --- Style de la piste de la barre de défilement (partie sur laquelle glisse le pouce) --- */
 ::-webkit-scrollbar-track {
-    background: rgb(88, 88, 88);
+    background: rgb(88, 88, 88); /* Fond gris pour la piste */
 }
 
+/* --- Style du "pouce" de la barre de défilement (la partie qui se déplace) --- */
 ::-webkit-scrollbar-thumb {
-    background: rgb(123, 123, 123);
-    border-radius: 6px;
+    background: rgb(123, 123, 123); /* Couleur du pouce gris */
+    border-radius: 6px; /* Coins arrondis pour le pouce */
 }
 
+/* --- Effet au survol du pouce de la barre de défilement --- */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(101, 101, 101);
+    background: rgb(101, 101, 101); /* Couleur plus foncée au survol */
 }
 
+/* --- Style de l'en-tête --- */
 header {
-    background: linear-gradient(0deg, rgb(88, 88, 88) 0%, rgb(101, 101, 101) 100%);
-    width: 100%;
-    height: 20%;
-    display: flex;
+    background: linear-gradient(0deg, rgb(88, 88, 88) 0%, rgb(101, 101, 101) 100%); /* Dégradé de gris pour l'en-tête */
+    width: 100%; /* Largeur totale */
+    height: 20%; /* Hauteur de l'en-tête */
+    display: flex; /* Disposition Flexbox pour l'en-tête */
 }
 
+/* --- Conteneur du logo --- */
 .div-logo {
-    width: 20%;
-    height: 100%;
+    width: 20%; /* Largeur de 20% pour le logo */
+    height: 100%; /* Hauteur de 100% */
 }
 
+/* --- Style de l'image du logo --- */
 .div-logo img {
-    max-width: 100%;
-    max-height: 100%;
-    transition: filter 0.5s ease;
+    max-width: 100%; /* Assurer que l'image occupe toute la largeur sans déformation */
+    max-height: 100%; /* Assurer que l'image occupe toute la hauteur sans déformation */
+    transition: filter 0.5s ease; /* Transition pour l'effet au survol */
 }
 
+/* --- Effet au survol du logo (ajout d'une ombre) --- */
 .div-logo img:hover {
-    filter: drop-shadow(0px 0px 20px #017cda);
+    filter: drop-shadow(0px 0px 20px #017cda); /* Ombre bleue autour du logo */
 }
 
+/* --- Conteneur pour le côté droit du header --- */
 .logo-right {
-    width: 80%;
-    height: 100%;
+    width: 80%; /* Largeur de 80% pour le côté droit */
+    height: 100%; /* Hauteur de 100% */
 }
 
+/* --- Style de la barre de navigation supérieure --- */
 .topnav {
-    height: 50%;
-    width: 100%;
-    display: flex;
+    height: 50%; /* Hauteur de 50% de l'en-tête */
+    width: 100%; /* Largeur totale */
+    display: flex; /* Disposition Flexbox */
 }
 
+/* --- Conteneur pour le champ de recherche --- */
 .div-search {
-    width: 30%;
-    height: 100%;
+    width: 30%; /* Largeur de 30% pour le champ de recherche */
+    height: 100%; /* Hauteur de 100% */
 }
 
+/* --- Style du champ de recherche --- */
 .div-search input[type=search] {
-    background-color: rgb(124, 124, 124);
-    border: 2px rgb(71, 71, 71) solid;
-    outline: none;
-    border-radius: 8px;     
-    width: 95%;
-    height: 80%;
-    margin-left: 2%;
-    margin-top: 2%;
-    font-size: 20px;
-    transition: box-shadow 0.5s ease;
+    background-color: rgb(124, 124, 124); /* Fond gris clair */
+    border: 2px rgb(71, 71, 71) solid; /* Bordure gris foncé */
+    outline: none; /* Enlever l'encadrement de focus par défaut */
+    border-radius: 8px; /* Coins arrondis pour le champ */
+    width: 95%; /* Largeur du champ à 95% de son conteneur */
+    height: 80%; /* Hauteur de 80% du conteneur */
+    margin-left: 2%; /* Marge gauche de 2% */
+    margin-top: 2%; /* Marge du haut de 2% */
+    font-size: 20px; /* Taille du texte dans le champ */
+    transition: box-shadow 0.5s ease; /* Transition pour l'ombre au focus */
 }
 
+/* --- Style du texte d'espace réservé dans le champ de recherche --- */
 .div-search input[type=search]::placeholder {
-    color: rgb(71, 71, 71);
+    color: rgb(71, 71, 71); /* Couleur gris foncé pour le texte placeholder */
 }
 
+/* --- Effet de focus sur le champ de recherche (lorsque l'utilisateur clique dedans) --- */
 .div-search input[type=search]:focus {
-    box-shadow: 0 0 30px 8px #007ca5;
+    box-shadow: 0 0 30px 8px #007ca5; /* Ombre bleue autour du champ lors du focus */
 }
 
+/* --- Conteneur pour les autres éléments dans l'en-tête (ex. : liens) --- */
 .other-stuff {
-    width: 70%;
-    height: 100%;
-    display: flex;
-    align-items: center;
+    width: 70%; /* Largeur de 70% pour cet élément */
+    height: 100%; /* Hauteur de 100% */
+    display: flex; /* Disposition Flexbox */
+    align-items: center; /* Centrer les éléments verticalement */
 }
 
+/* --- Style des liens dans le conteneur "other-stuff" --- */
 .other-stuff a {
-    background-color: rgb(125, 125, 125);
-    display: block;
-    border-radius: 10px;
-    color: rgb(228, 228, 228);
-    text-align: center;
-    text-decoration: none;
-    font-size: 125%;
-    height: 50px;
-    width: 10%;
-    margin: 5px;
-    line-height: 50px;
-    transition: background-color 0.5s ease;
+    background-color: rgb(125, 125, 125); /* Fond gris pour les liens */
+    display: block; /* Affichage en bloc */
+    border-radius: 10px; /* Coins arrondis */
+    color: rgb(228, 228, 228); /* Couleur claire pour les liens */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Enlever le soulignement des liens */
+    font-size: 125%; /* Taille du texte des liens */
+    height: 50px; /* Hauteur des liens */
+    width: 10%; /* Largeur des liens */
+    margin: 5px; /* Marge autour des liens */
+    line-height: 50px; /* Centrer le texte verticalement */
+    transition: background-color 0.5s ease; /* Transition de la couleur de fond */
 }
 
+/* --- Effet de survol des liens dans "other-stuff" --- */
 .other-stuff a:hover {
-    background-color: rgb(147, 147, 147);
-
+    background-color: rgb(147, 147, 147); /* Fond plus foncé au survol */
 }
 
+/* --- Barres de navigation principales (nav-bar) --- */
 .nav-bar {
-    height: 50%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+    height: 50%; /* Hauteur de 50% */
+    width: 100%; /* Largeur totale */
+    display: flex; /* Disposition Flexbox */
+    flex-direction: row; /* Disposition horizontale */
 }
 
+/* --- Style des liens dans la barre de navigation --- */
 .nav-bar a {
-    background-color: rgb(125, 125, 125);
-    display: block;
-    border-radius: 10px;
-    color: rgb(228, 228, 228);
-    text-align: center;
-    text-decoration: none;
-    font-size: 125%;
-    height: 50px;
-    width: 10%;
-    margin: 5px;
-    line-height: 50px;
-    transition: background-color 0.5s ease;
+    background-color: rgb(125, 125, 125); /* Fond gris pour les liens */
+    display: block; /* Affichage en bloc */
+    border-radius: 10px; /* Coins arrondis */
+    color: rgb(228, 228, 228); /* Couleur claire pour les liens */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Enlever le soulignement des liens */
+    font-size: 125%; /* Taille du texte des liens */
+    height: 50px; /* Hauteur des liens */
+    width: 10%; /* Largeur des liens */
+    margin: 5px; /* Marge autour des liens */
+    line-height: 50px; /* Centrer le texte verticalement */
+    transition: background-color 0.5s ease; /* Transition de la couleur de fond */
 }
 
+/* --- Effet de survol des liens dans la barre de navigation --- */
 .nav-bar a:hover {
-    background-color: rgb(147, 147, 147);   
+    background-color: rgb(147, 147, 147); /* Fond plus foncé au survol */
 }
 
+/* --- Section principale du contenu --- */
 main {
-    background: linear-gradient(0deg, rgb(53, 53, 53) 0%, rgb(55, 55, 55) 100%);
-    width: 100%;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+    background: linear-gradient(0deg, rgb(53, 53, 53) 0%, rgb(55, 55, 55) 100%); /* Dégradé de gris pour le fond */
+    width: 100%; /* Largeur totale */
+    flex-grow: 1; /* Prendre tout l'espace restant dans le body */
+    display: flex; /* Disposition Flexbox */
+    flex-direction: column; /* Disposition en colonne pour le contenu */
 }
 
+/* --- Pied de page (footer) --- */
 footer {
-    background: rgb(74,74,74);
-    background: linear-gradient(0deg, rgba(74,74,74,1) 100%, rgba(22,22,22,1) 0%);
-    width: 100%;
-    height: 10%;
-    text-align: center;
-    color: white;
+    background: rgb(74,74,74); /* Fond gris sombre */
+    background: linear-gradient(0deg, rgba(74,74,74,1) 100%, rgba(22,22,22,1) 0%); /* Dégradé pour le footer */
+    width: 100%; /* Largeur totale */
+    height: 10%; /* Hauteur de 10% */
+    text-align: center; /* Centrer le texte */
+    color: white; /* Texte en blanc */
 }
 
+/* --- Media Queries pour les petits écrans --- */
 @media (max-width: 768px) {
     .other-stuff a {
-        width: 50%;
+        width: 50%; /* Les liens occupent 50% de la largeur sur les petits écrans */
     }
 
     .nav-bar a {
-        width: 30%;
+        width: 30%; /* Les liens occupent 30% de la largeur sur les petits écrans */
     }
 
     .div-logo {
-        width: 50%;
+        width: 50%; /* Le logo occupe 50% de la largeur sur les petits écrans */
     }
 
     .div-search input[type=search]::placeholder {
-        font-size: 20px;
+        font-size: 20px; /* Réduire la taille du placeholder sur les petits écrans */
     }
 }

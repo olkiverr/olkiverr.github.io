@@ -1,0 +1,140 @@
+/* --- Conteneur principal pour les articles de blog --- */
+.blog-container {
+    width: 90%; /* Largeur du conteneur à 90% de la fenêtre */
+    margin: 0 auto; /* Centrer le conteneur horizontalement */
+    padding: 2% 0; /* Ajouter un padding vertical */
+    color: white; /* Couleur du texte en blanc */
+}
+
+/* --- Style pour chaque article de blog --- */
+.blog-post {
+    background-color: #2b2b2b; /* Fond sombre pour l'article */
+    border-radius: 15px; /* Coins arrondis */
+    padding: 2rem; /* Ajouter du padding à l'intérieur de l'article */
+    margin-bottom: 2rem; /* Espace sous chaque article */
+    display: flex; /* Utilisation de flexbox pour la disposition */
+    flex-direction: column; /* Disposer les éléments de l'article en colonne */
+    text-align: center; /* Centrer le texte */
+}
+
+/* --- Style du titre de l'article --- */
+.blog-post h2 {
+    font-size: 1.8rem; /* Taille du texte du titre */
+    color: #fff; /* Couleur du titre en blanc */
+    margin-bottom: 1rem; /* Espace sous le titre */
+}
+
+/* --- Style de la date de publication de l'article --- */
+.blog-post .post-date {
+    font-size: 0.9rem; /* Taille du texte plus petite pour la date */
+    color: #777; /* Couleur grise pour la date */
+    margin-bottom: 1rem; /* Espace sous la date */
+}
+
+/* --- Style pour les images des articles --- */
+.blog-post img {
+    width: 20%; /* Largeur de l'image fixée à 20% */
+    border-radius: 15px; /* Coins arrondis pour les images */
+    margin: auto; /* Centrer l'image horizontalement */
+    object-fit: cover; /* Adapter l'image à l'espace sans la déformer */
+}
+
+/* --- Style du contenu de l'article --- */
+.blog-post .post-content {
+    font-size: 1rem; /* Taille du texte pour le contenu */
+    color: #ddd; /* Couleur gris clair pour le contenu */
+    line-height: 1.6; /* Espacement entre les lignes pour améliorer la lisibilité */
+}
+
+/* --- Style pour le lien "Lire la suite" --- */
+.blog-post .read-more {
+    color: #017cda; /* Couleur bleue pour le lien */
+    text-decoration: none; /* Supprimer le soulignement du lien */
+    font-weight: bold; /* Mettre le lien en gras */
+    margin-top: 1rem; /* Ajouter un espace au-dessus du lien */
+    display: inline-block; /* Comportement du lien comme un élément inline */
+}
+
+/* --- Effet au survol du lien "Lire la suite" --- */
+.blog-post .read-more:hover {
+    text-decoration: underline; /* Souligner le lien au survol */
+}
+
+/* --- Barre latérale du blog (sidebar) --- */
+.blog-sidebar {
+    background-color: #333; /* Fond sombre pour la sidebar */
+    padding: 1.5rem; /* Espacement interne de la sidebar */
+    border-radius: 15px; /* Coins arrondis pour la sidebar */
+    margin-bottom: 2rem; /* Espacement sous la sidebar */
+}
+
+/* --- Style du titre dans la sidebar --- */
+.blog-sidebar h3 {
+    color: #fff; /* Couleur blanche pour le titre */
+    font-size: 1.4rem; /* Taille du titre dans la sidebar */
+    margin-bottom: 1rem; /* Espacement sous le titre */
+}
+
+/* --- Liste des liens dans la sidebar --- */
+.blog-sidebar ul {
+    list-style: none; /* Supprimer les puces de la liste */
+    padding: 0; /* Supprimer le padding de la liste */
+}
+
+/* --- Style pour chaque élément de la liste dans la sidebar --- */
+.blog-sidebar ul li {
+    color: #b0b0b0; /* Couleur grise pour les éléments de la liste */
+    font-size: 1rem; /* Taille du texte des éléments de la liste */
+    margin-bottom: 0.5rem; /* Espacement entre chaque élément de la liste */
+}
+
+/* --- Style des liens dans la sidebar --- */
+.blog-sidebar ul li a {
+    color: #017cda; /* Couleur bleue pour les liens */
+    text-decoration: none; /* Supprimer le soulignement des liens */
+}
+
+/* --- Effet au survol des liens dans la sidebar --- */
+.blog-sidebar ul li a:hover {
+    text-decoration: underline; /* Souligner les liens au survol */
+}
+
+/* --- Styles pour le pied de page (footer) --- */
+footer {
+    background-color: #1c1c1c; /* Fond sombre pour le footer */
+    color: white; /* Texte en blanc dans le footer */
+    display: flex; /* Utiliser flexbox pour la disposition */
+    flex-direction: column; /* Disposer les éléments du footer en colonne */
+    align-items: center; /* Centrer les éléments horizontalement */
+    justify-content: center; /* Centrer les éléments verticalement */
+    padding-bottom: 15px; /* Ajouter un padding en bas du footer */
+}
+
+/* --- Style général pour tous les éléments du footer --- */
+footer * {
+    margin: auto; /* Utiliser une marge automatique pour centrer les éléments */
+    margin-top: 5px; /* Ajouter un peu d'espace entre les éléments */
+}
+
+/* --- Responsive Design pour les petits écrans --- */
+@media (max-width: 768px) {
+    /* La largeur du conteneur des articles prend 100% de la fenêtre */
+    .blog-container {
+        width: 100%;
+    }
+
+    /* Réduire la taille du titre du blog sur petits écrans */
+    .blog-header h1 {
+        font-size: 2rem;
+    }
+
+    /* Les images des articles prennent toute la largeur sur petits écrans */
+    .blog-post img {
+        width: 100%;
+    }
+
+    /* Ajouter un espace au-dessus de la sidebar sur petits écrans */
+    .blog-sidebar {
+        margin-top: 2rem;
+    }
+}
