@@ -108,36 +108,47 @@
 /* --- Conteneur principal pour le slider des prochains animes --- */
 .upcoming-slider-container {
     border-radius: 20px; /* Coins arrondis pour le conteneur */
-    width: 90%; /* Largeur du conteneur à 90% */
-    height: 30%; /* Hauteur du conteneur à 30% */
-    margin: 1% auto; /* Marge autour du conteneur et centrage horizontal */
+    width: 90%; /* Largeur du conteneur à 90% de la largeur de la page */
+    height: 30%; /* Hauteur du conteneur à 30% de la hauteur de la page */
+    margin: 0 auto; /* Centrer le conteneur horizontalement */
 }
 
-/* --- Style du texte dans le conteneur des prochains animes --- */
+/* --- Style du texte dans le conteneur des tendances --- */
 .upcoming-slider-container p {
     color: white; /* Texte en blanc */
-    font-size: 160%; /* Taille du texte plus grande pour plus de visibilité */
+    font-size: 160%; /* Taille de la police à 160% pour une meilleure visibilité */
 }
 
-/* --- Slider des prochains animes --- */
+/* --- Slider des tendances (affichage horizontal des éléments) --- */
 .upcoming-slider {
     width: 100%; /* Largeur à 100% */
-    height: 70%; /* Hauteur à 70% */
-    display: flex; /* Utilisation de Flexbox pour disposer les éléments horizontalement */
+    height: 70%; /* Hauteur du slider à 70% de la hauteur du conteneur */
+    display: flex; /* Utilisation de Flexbox pour afficher les éléments horizontalement */
     position: relative; /* Positionnement relatif pour les flèches de navigation */
 }
 
-/* --- Conteneur des images des animes dans le slider des prochains animes --- */
+/* --- Conteneur des images des animes dans le slider des tendances --- */
 .div-anime-img-upcoming-container {
-    border: rgb(36, 36, 36) 3px solid; /* Bordure gris foncé */
-    border-radius: 20px; /* Coins arrondis */
-    display: flex; /* Flexbox pour disposition horizontale */
+    border: rgb(36, 36, 36) 3px solid; /* Bordure gris foncé autour du conteneur des images */
+    border-radius: 20px; /* Coins arrondis pour le conteneur des images */
+    display: flex; /* Utilisation de Flexbox pour une disposition des éléments en ligne */
     overflow: auto; /* Permet le défilement horizontal des images */
-    height: 100%; /* Hauteur à 100% du conteneur */
-    width: 100%; /* Largeur à 100% */
-    margin: auto; /* Centrer horizontalement */
+    height: 100%; /* Hauteur à 100% du conteneur parent */
+    width: 100%; /* Largeur à 100% du conteneur parent */
+    margin: auto; /* Centrer le conteneur des images horizontalement */
     position: relative; /* Positionnement relatif pour les flèches de navigation */
-    scroll-behavior: smooth; /* Défilement fluide */
+    scroll-behavior: smooth; /* Défilement fluide pour une meilleure expérience utilisateur */
+}
+
+/* --- Supprimer la barre de défilement verticale --- */
+.div-anime-img-upcoming-container::-webkit-scrollbar {
+    height: 0; /* Supprimer la barre de défilement verticale */
+}
+
+/* --- Style des images d'animes dans le slider des tendances --- */
+.div-anime-img-upcoming-container .div-anime-img {
+    display: inline-block; /* Afficher chaque image en ligne */
+    position: relative; /* Positionnement relatif pour les légendes */
 }
 
 /* --- Supprimer la barre de défilement verticale du conteneur des images --- */
